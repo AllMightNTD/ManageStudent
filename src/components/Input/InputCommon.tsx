@@ -33,6 +33,7 @@ const InputCommon = <T extends FieldValues>({
     helperText,
     controlProps,
     required,
+    sx,
     ...props
 }: MyInputProps<T>) => {
     const {
@@ -40,7 +41,7 @@ const InputCommon = <T extends FieldValues>({
         fieldState: { error },
     } = useController({ name, control, defaultValue });
     return (
-        <FormControl sx={{ width: '100%' }}>
+        <FormControl sx={{...sx , width:'100%'}}>
             <Typography
                 sx={{
                     color: error ? '#d32f2f' : 'initial',
@@ -56,6 +57,7 @@ const InputCommon = <T extends FieldValues>({
                 )}
             </Typography>
             <InputStyled
+                fullWidth={fullWidth}
                 type={type}
                 placeholder={placeholder}
                 {...inputProps}
@@ -78,7 +80,7 @@ const InputStyled = styled(OutlinedInput)(({ theme }) => ({
     borderRadius: '5px',
     overflow: 'hidden',
     fontSize: '16px',
-    border: '1px solid #000',
+    border : '1px solid grey',
     '& .MuiOutlinedInput-notchedOutline': {
         border: 'none',
     },

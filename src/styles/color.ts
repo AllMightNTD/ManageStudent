@@ -66,6 +66,7 @@ const indigo = {
 const blue = {
     50: '#e3f2fd',
     100: '#bbdefb',
+    150:'#152259',
     200: '#90caf9',
     300: '#64b5f6',
     400: '#42a5f5',
@@ -216,7 +217,8 @@ const grey = {
     600: '#757575',
     700: '#616161',
     800: '#424242',
-    900: '#212121'
+    900: '#212121',
+    150: '#fcfafa'
 };
 
 const blueGrey = {
@@ -232,4 +234,8 @@ const blueGrey = {
     900: '#263238'
 };
 
-export { red, pink, purple, deepPurple, indigo, blue, lightBlue, teal, green, lightGreen, lime, yellow, orange, brown, grey, blueGrey, deepOrange, cyan }
+const white = {
+    50: '#fff'
+};
+
+export { red, pink, purple, deepPurple, indigo, blue, lightBlue, teal, green, lightGreen, lime, yellow, orange, brown, grey, blueGrey, deepOrange, cyan ,white}
